@@ -1,59 +1,78 @@
-# Crypto Exchange Security Comparison
+# Bitpie Wallet Withdrawal Reference
 
-# Crypto Exchange Security Comparison
+# Bitpie Wallet Withdrawal Reference
 
-## Overview
-Curated reference comparing major cryptocurrency exchange security features, insurance/protection mechanisms, historical incidents, and risk factors.
+## Withdrawal Overview
 
-## Exchange Security Matrix
+Bitpie is a multi-chain wallet supporting BTC, ETH, USDT, USDC, and 100+ altcoins. Withdrawals vary by blockchain network, fee tier, and confirmation speed.
 
-| Exchange | Max Insurance/SAFU Fund | 2FA Support | Cold Storage % | Major Incidents | Risk Level |
-|----------|------------------------|-------------|----------------|-----------------|------------|
-| Binance | SAFU Fund (~$1B equiv) | Yes (App/SMS/Email) | ~90% user assets | 2014 test hack; 2019 API key theft (SAFU covered $40M) | Medium |
-| Kraken | Kraken Security Labs | Yes (App/SMS/Hardware) | ~95% user assets | 2014 minor; strong record | Medium-Low |
-| Coinbase | FDIC-insured USD; insurance for crypto | Yes (App/SMS/Hardware) | ~98% user assets | 2012 DNS attack; strong post-incident | Low-Medium |
-| OKX | Insurance pool | Yes (App/SMS/Hardware) | ~85% user assets | 2021 KYC data leak (non-trading) | Medium |
-| Kraken Pro | Insurance coverage | Yes (App/SMS/Hardware) | ~95% | Strong audit record | Medium-Low |
+## Withdrawal Methods Comparison
 
-## Key Protection Mechanisms
+| Blockchain | Supported Coins | Typical Fee Range | Est. Confirmation Time | Notes |
+|---|---|---|---|---|
+| Bitcoin (BTC) | BTC | Variable (miner fee) | 10–60 min | Adjust fee by priority; mempool-dependent |
+| Ethereum (ETH) | ETH, USDT, USDC, ERC-20 | $1–50 (gas-dependent) | 15–60 sec | Low fees during off-peak hours |
+| Tron (TRX) | USDT-TRC20, TRX | <$1 | <30 sec | Lowest fees; fast finality |
+| BNB Smart Chain | USDT-BSC, BNB, BEP-20 | $0.10–2 | 3–15 sec | Cost-effective |
+| Polygon (MATIC) | USDC, MATIC, ERC-20 | <$0.10 | 2–10 sec | Minimal fees |
+| Solana (SOL) | USDC, SOL | <$0.01 | 5–30 sec | Ultra-low fees |
 
-### Binance
-- **SAFU Fund:** Emergency insurance reserve for user protection
-- **Multi-sig wallets:** Cold storage with multiple signatures required
-- **API key restrictions:** Whitelist IPs, restrict operations
-- **2FA enforcement:** Highly recommended for trading
-- **Liability:** Covers technical/security incidents from platform (not user error)
+## Step-by-Step Withdrawal Process
 
-### Best Practices (All Exchanges)
-- Enable 2FA via authenticator app (not SMS when possible)
-- Use IP whitelisting on API keys
-- Withdraw to personal cold storage (hardware wallet) for hodling
-- Monitor account activity and set withdrawal whitelist
-- Regular security audits (third-party attestations)
+### 1. Access Withdrawal Interface
+- Open Bitpie app → Tap asset → Select "Withdraw"
+- Confirm wallet unlock (biometric or PIN)
 
-## Historical Incident Reference
+### 2. Recipient Address Entry
+- Paste or scan recipient address
+- **Verify address format** matches selected blockchain
+- Test with small amount first if unfamiliar
 
-| Year | Exchange | Type | Impact | Recovery |
-|------|----------|------|--------|----------|
-| 2019 | Binance | API key theft | $40M BTC | SAFU fund covered losses |
-| 2022 | FTX | Fraud/misuse | $8B+ | Bankruptcy; no recovery |
-| 2020 | Kraken | Social engineering | Minor | Rapid response |
-| 2021 | OKX | Data leak (non-trading) | Minimal | Investigated; UI unchanged |
+### 3. Select Network & Fee Tier
+- Choose blockchain from dropdown
+- Select fee priority (Standard / Fast / Custom)
+- Review final fee in USD/fiat equivalent
 
-## Evaluation Checklist
+### 4. Confirm & Sign
+- Review amount and recipient
+- Confirm withdrawal (biometric/PIN)
+- Wait for on-chain confirmation
 
-- [ ] Exchange has published third-party security audit (recent, <2 years)
-- [ ] Insurance/SAFU fund clearly documented and operational
-- [ ] 2FA via app-based TOTP supported
-- [ ] API key permissions granular (trade, withdraw, read-only)
-- [ ] Cold storage percentage disclosed or confirmed
-- [ ] Incident response documented and transparent
-- [ ] Regulatory licensing in major jurisdictions
-- [ ] No major known vulnerabilities in past 12 months
+## Fee Optimization Tips
 
-## References
-- Binance Security: https://www.binance.com/en/support/faq/safu
+- **Use Tron/Polygon/Solana** for stablecoins if speed is priority (sub-$0.10)
+- **Batch large withdrawals** to reduce per-transaction overhead
+- **Check mempool** before mainnet Bitcoin withdrawals; high congestion = higher fees
+- **Avoid peak hours** (ETH Fri–Sun 3–6 PM UTC)
+- **Monitor gas trackers** (etherscan.io, bscscan.com) before finalizing
+
+## Common Issues & Troubleshooting
+
+| Issue | Cause | Solution |
+|---|---|---|
+| "Insufficient Balance" | Wallet shows less than withdrawal amount | Refresh balance; check pending deposits |
+| "Invalid Address" | Typo or wrong blockchain format | Re-verify address; use QR scan for accuracy |
+| "Transaction Pending" | Network congestion | Wait or increase fee; check block explorer |
+| "Withdrawal Disabled" | Wallet under review / suspicious activity | Contact Bitpie support; verify identity |
+
+## Best Practices
+
+1. **Never withdraw to exchange deposits** without verifying memo/tag for XRP, XLM, EOS
+2. **Test small amounts** first to unfamiliar wallets
+3. **Keep receipts** of confirmation hashes for tax/audit trails
+4. **Use hardware wallet** addresses for large amounts (>$5k)
+5. **Enable 2FA + biometric lock** on Bitpie account
+
+## Additional Resources
+
+- Bitpie Official Support: https://support.bitpie.com
+- Gas Fee Tracker (ETH): https://etherscan.io/gastracker
+- Blockchain Explorers: Bitcoin (blockchain.com), Ethereum (etherscan.io), Tron (tronscan.org)
+
+---
+
+*Reference guide compiled from Bitpie withdrawal documentation. Fees and confirmation times are approximate and subject to network conditions. Always verify current rates before withdrawal.*
 
 ## Reference
 
-[trendkoin](https://trendkoin.com/exchange/binance-security)
+[trendkoin](https://trendkoin.com/wallet/bitpie-how-to-withdraw)
